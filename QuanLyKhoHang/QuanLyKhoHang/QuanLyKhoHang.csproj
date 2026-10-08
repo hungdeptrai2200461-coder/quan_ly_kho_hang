@@ -1,0 +1,665 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E29230F1-BFFC-4F4A-8F7B-8157C8360ADF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyKhoHang</RootNamespace>
+    <AssemblyName>QuanLyKhoHang</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v22.2" />
+    <Reference Include="DevExpress.Charts.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v22.2" />
+    <Reference Include="DevExpress.Data.v22.2" />
+    <Reference Include="DevExpress.DataAccess.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v22.2.Drawing, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Export, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.2" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core" />
+    <Reference Include="DevExpress.Utils.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.2" />
+    <Reference Include="DevExpress.Printing.v22.2.Core" />
+    <Reference Include="DevExpress.Drawing.v22.2" />
+    <Reference Include="DevExpress.XtraGauges.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v22.2.Extensions, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraWizard.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.6.0.0\lib\net461\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.6.0.0\lib\net461\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.CommandLine, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.CommandLine.6.0.0\lib\net461\Microsoft.Extensions.Configuration.CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.EnvironmentVariables, Version=6.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.EnvironmentVariables.6.0.1\lib\net461\Microsoft.Extensions.Configuration.EnvironmentVariables.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.FileExtensions.6.0.0\lib\net461\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Json.6.0.0\lib\net461\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.UserSecrets, Version=6.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.UserSecrets.6.0.1\lib\net461\Microsoft.Extensions.Configuration.UserSecrets.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=6.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.6.0.1\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Physical.6.0.0\lib\net461\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileSystemGlobbing.6.0.0\lib\net461\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting, Version=6.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Hosting.6.0.1\lib\net461\Microsoft.Extensions.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Hosting.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.6.0.0\lib\net461\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Configuration, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Configuration.6.0.0\lib\net461\Microsoft.Extensions.Logging.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Console, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Console.6.0.0\lib\net461\Microsoft.Extensions.Logging.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Debug, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Debug.6.0.0\lib\net461\Microsoft.Extensions.Logging.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.EventLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.EventLog.6.0.0\lib\net461\Microsoft.Extensions.Logging.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.EventSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.EventSource.6.0.0\lib\net461\Microsoft.Extensions.Logging.EventSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.6.0.0\lib\net461\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options.ConfigurationExtensions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.ConfigurationExtensions.6.0.0\lib\net461\Microsoft.Extensions.Options.ConfigurationExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.6.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\UserData.cs" />
+    <Compile Include="Entities\ChiTietNhap.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ChiTietXuat.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\HangHoa.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\KeHang.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\KhoHang.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\NhaCungCap.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\NhanVien.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PhieuNhap.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PhieuXuat.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelView\ChiTietPhieuXuatModelView.cs" />
+    <Compile Include="ModelView\ChiTietPhieuNhapModelView.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\fDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\fDangNhap.Designer.cs">
+      <DependentUpon>fDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MENU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MENU.Designer.cs">
+      <DependentUpon>MENU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyNhanVien\fCUNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyNhanVien\fCUNhanVien.Designer.cs">
+      <DependentUpon>fCUNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyNhanVien\ucNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyNhanVien\ucNhanVien.Designer.cs">
+      <DependentUpon>ucNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuNhap\fChiTietPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuNhap\fChiTietPhieuNhap.Designer.cs">
+      <DependentUpon>fChiTietPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuNhap\SuaThongTinSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuNhap\SuaThongTinSanPham.Designer.cs">
+      <DependentUpon>SuaThongTinSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuNhap\ThemPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuNhap\ThemPhieuNhap.Designer.cs">
+      <DependentUpon>ThemPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuNhap\TimKiemSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuNhap\TimKiemSanPham.Designer.cs">
+      <DependentUpon>TimKiemSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuNhap\ucPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuNhap\ucPhieuNhap.Designer.cs">
+      <DependentUpon>ucPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyHangHoa\fCUHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyHangHoa\fCUHangHoa.Designer.cs">
+      <DependentUpon>fCUHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyHangHoa\ucHangHoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyHangHoa\ucHangHoa.Designer.cs">
+      <DependentUpon>ucHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyKe\fCUKeHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyKe\fCUKeHang.Designer.cs">
+      <DependentUpon>fCUKeHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyKe\ucKeHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyKe\ucKeHang.Designer.cs">
+      <DependentUpon>ucKeHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyKho\fCUKhoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyKho\fCUKhoHang.Designer.cs">
+      <DependentUpon>fCUKhoHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyKho\ucKhoHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyKho\ucKhoHang.Designer.cs">
+      <DependentUpon>ucKhoHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyNhaCungCap\fCUNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyNhaCungCap\fCUNhaCungCap.Designer.cs">
+      <DependentUpon>fCUNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyNhaCungCap\ucNhaCungCap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyNhaCungCap\ucNhaCungCap.Designer.cs">
+      <DependentUpon>ucNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuXuat\fChiTietPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuXuat\fChiTietPhieuXuat.Designer.cs">
+      <DependentUpon>fChiTietPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuXuat\SuaThongTinSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuXuat\SuaThongTinSanPham.Designer.cs">
+      <DependentUpon>SuaThongTinSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuXuat\ThemPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuXuat\ThemPhieuXuat.Designer.cs">
+      <DependentUpon>ThemPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuXuat\TimKiemSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuXuat\TimKiemSanPham.Designer.cs">
+      <DependentUpon>TimKiemSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuXuat\ucPhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\QuanLyPhieuXuat\ucPhieuXuat.Designer.cs">
+      <DependentUpon>ucPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThongKe\dsHangHoa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHangHoa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThongKe\dsPhieuXuat.Designer.cs">
+      <DependentUpon>dsPhieuXuat.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Views\ThongKe\dsPhieuNhap.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPhieuNhap.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThongKe\HangHoaRP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\ThongKe\HangHoaRP.Designer.cs">
+      <DependentUpon>HangHoaRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThongKe\PhieuXuatRP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\ThongKe\PhieuXuatRP.Designer.cs">
+      <DependentUpon>PhieuXuatRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThongKe\ucthongke.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ThongKe\ucthongke.Designer.cs">
+      <DependentUpon>ucthongke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThongKe\ucThongKeXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ThongKe\ucThongKeXuat.Designer.cs">
+      <DependentUpon>ucThongKeXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThongKe\ucThongKeNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ThongKe\ucThongKeNhap.Designer.cs">
+      <DependentUpon>ucThongKeNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThongKe\ucThongKeTinhTrang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ThongKe\ucThongKeTinhTrang.Designer.cs">
+      <DependentUpon>ucThongKeTinhTrang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThongKe\ucThongKeHangHoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ThongKe\ucThongKeHangHoa.Designer.cs">
+      <DependentUpon>ucThongKeHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThongKe\PhieuNhapRP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\ThongKe\PhieuNhapRP.Designer.cs">
+      <DependentUpon>PhieuNhapRP.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\fDangNhap.resx">
+      <DependentUpon>fDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MENU.resx">
+      <DependentUpon>MENU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyNhanVien\fCUNhanVien.resx">
+      <DependentUpon>fCUNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyNhanVien\ucNhanVien.resx">
+      <DependentUpon>ucNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyPhieuNhap\fChiTietPhieuNhap.resx">
+      <DependentUpon>fChiTietPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyPhieuNhap\SuaThongTinSanPham.resx">
+      <DependentUpon>SuaThongTinSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyPhieuNhap\ThemPhieuNhap.resx">
+      <DependentUpon>ThemPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyPhieuNhap\TimKiemSanPham.resx">
+      <DependentUpon>TimKiemSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyPhieuNhap\ucPhieuNhap.resx">
+      <DependentUpon>ucPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyHangHoa\fCUHangHoa.resx">
+      <DependentUpon>fCUHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyHangHoa\ucHangHoa.resx">
+      <DependentUpon>ucHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyKe\fCUKeHang.resx">
+      <DependentUpon>fCUKeHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyKe\ucKeHang.resx">
+      <DependentUpon>ucKeHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyKho\fCUKhoHang.resx">
+      <DependentUpon>fCUKhoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyKho\ucKhoHang.resx">
+      <DependentUpon>ucKhoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyNhaCungCap\fCUNhaCungCap.resx">
+      <DependentUpon>fCUNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyNhaCungCap\ucNhaCungCap.resx">
+      <DependentUpon>ucNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyPhieuXuat\fChiTietPhieuXuat.resx">
+      <DependentUpon>fChiTietPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyPhieuXuat\SuaThongTinSanPham.resx">
+      <DependentUpon>SuaThongTinSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyPhieuXuat\ThemPhieuXuat.resx">
+      <DependentUpon>ThemPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyPhieuXuat\TimKiemSanPham.resx">
+      <DependentUpon>TimKiemSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuanLyPhieuXuat\ucPhieuXuat.resx">
+      <DependentUpon>ucPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ThongKe\HangHoaRP.resx">
+      <DependentUpon>HangHoaRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ThongKe\PhieuXuatRP.resx">
+      <DependentUpon>PhieuXuatRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ThongKe\ucthongke.resx">
+      <DependentUpon>ucthongke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ThongKe\ucThongKeXuat.resx">
+      <DependentUpon>ucThongKeXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ThongKe\ucThongKeNhap.resx">
+      <DependentUpon>ucThongKeNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ThongKe\ucThongKeTinhTrang.resx">
+      <DependentUpon>ucThongKeTinhTrang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ThongKe\ucThongKeHangHoa.resx">
+      <DependentUpon>ucThongKeHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ThongKe\PhieuNhapRP.resx">
+      <DependentUpon>PhieuNhapRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <EntityDeploy Include="Entities\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entities\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Views\ThongKe\dsHangHoa.xsc">
+      <DependentUpon>dsHangHoa.xsd</DependentUpon>
+    </None>
+    <None Include="Views\ThongKe\dsHangHoa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHangHoa.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Views\ThongKe\dsHangHoa.xss">
+      <DependentUpon>dsHangHoa.xsd</DependentUpon>
+    </None>
+    <None Include="Views\ThongKe\dsPhieuXuat.xsc">
+      <DependentUpon>dsPhieuXuat.xsd</DependentUpon>
+    </None>
+    <None Include="Views\ThongKe\dsPhieuXuat.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPhieuXuat.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Views\ThongKe\dsPhieuXuat.xss">
+      <DependentUpon>dsPhieuXuat.xsd</DependentUpon>
+    </None>
+    <None Include="Views\ThongKe\dsPhieuNhap.xsc">
+      <DependentUpon>dsPhieuNhap.xsd</DependentUpon>
+    </None>
+    <None Include="Views\ThongKe\dsPhieuNhap.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPhieuNhap.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Views\ThongKe\dsPhieuNhap.xss">
+      <DependentUpon>dsPhieuNhap.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entities\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entities\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\checked.png" />
+    <Content Include="Resources\clockwise.png" />
+    <Content Include="Resources\document.png" />
+    <Content Include="Resources\reject.png" />
+    <Content Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
